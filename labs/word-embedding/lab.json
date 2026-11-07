@@ -1,0 +1,73 @@
+{
+  "id": "word-embedding",
+  "title": "Word Embedding Lab",
+  "decks": [
+    "02-Word-Embedding.pdf"
+  ],
+  "sub": "NLP · Lecture 2: Word Embedding · seven hands-on lessons",
+  "stamp": "Page: words as vectors<br><b>● sports · ■ politics</b> · drag the dashed rings",
+  "anchor": "the word vectors themselves (no story)",
+  "navWidth": 200,
+  "built": "2026-11-07",
+  "artifact": "",
+  "deckDividers": {},
+  "footer": "Each lesson runs Puzzle → Explore → Name → Challenge (interactive-educator method), for a learner who knows linear algebra, softmax and basic neural networks but is new to NLP. Source deck: M. Samiei, \"Lecture 2: Word Embedding\", CS 677, Sharif University of Technology (after Mikolov et al. 2013, Bojanowski et al. 2017, Caliskan et al. 2017). Word vectors here are 2-D teaching toys: hand-placed in lessons 1, 4 and 5, and trained in your browser on a four-sentence corpus in lesson 3. The Persian sentences are made up, except the Mazandarani ones from slide 3. The n-gram vectors in lesson 6 are random, so that only the shared pieces make words similar. The WEAT scores in lesson 7 are the slide's fastText Persian Wikipedia numbers (slides 33–34); the larger groups in its challenge are hypothetical.",
+  "lessons": [
+    {
+      "id": "onehot",
+      "n": 1,
+      "title": "Every one-hot word is a stranger",
+      "sub": "one-hot · dot product 0 · sharing evidence",
+      "file": "l1-onehot.jsx",
+      "slides": "7–12"
+    },
+    {
+      "id": "context",
+      "n": 2,
+      "title": "Similar contexts, related words",
+      "sub": "distributional hypothesis · co-occurrence · cosine",
+      "file": "l2-context.jsx",
+      "slides": "2–5, 12–13, 19"
+    },
+    {
+      "id": "skipgram",
+      "n": 3,
+      "title": "Predict the neighbours, get the meaning",
+      "sub": "Skip-gram · CBOW · softmax over u·v",
+      "file": "l3-skipgram.jsx",
+      "slides": "14–19, 25"
+    },
+    {
+      "id": "negative",
+      "n": 4,
+      "title": "Skip the huge softmax",
+      "sub": "negative sampling · σ(s) · k + 1 dot products",
+      "file": "l4-negative.jsx",
+      "slides": "23–24"
+    },
+    {
+      "id": "analogy",
+      "n": 5,
+      "title": "Relations are directions",
+      "sub": "king − man + woman · intrinsic evaluation",
+      "file": "l5-analogy.jsx",
+      "slides": "20–22, 29–30"
+    },
+    {
+      "id": "subword",
+      "n": 6,
+      "title": "Unseen words from known pieces",
+      "sub": "FastText · character n-grams · polysemy",
+      "file": "l6-subword.jsx",
+      "slides": "26–28"
+    },
+    {
+      "id": "bias",
+      "n": 7,
+      "title": "Vectors inherit associations",
+      "sub": "WEAT · permutation test · Persian fastText",
+      "file": "l7-bias.jsx",
+      "slides": "31–35"
+    }
+  ]
+}

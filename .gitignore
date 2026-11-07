@@ -1,0 +1,6 @@
+build/
+shots/
+node_modules/
+*.dom.html
+.DS_Store
+tools/vendor/

@@ -1,0 +1,76 @@
+{
+  "id": "attention",
+  "title": "Attention Lab",
+  "decks": [
+    "03-Attention.pdf"
+  ],
+  "sub": "NLP · Lecture 3: Attention · seven hands-on lessons",
+  "stamp": "Page: queries, keys and values<br><b>weights sum to 1</b> · drag the dashed rings",
+  "anchor": "the attention weights themselves (no story)",
+  "navWidth": 200,
+  "built": "2026-11-07",
+  "artifact": "",
+  "deckDividers": {
+    "1": "Part 1 · Seq2seq and Bahdanau attention (slides 2–31)",
+    "4": "Part 2 · The Transformer (slides 32–73)"
+  },
+  "footer": "Each lesson runs Puzzle → Explore → Name → Challenge (interactive-educator method), for a learner who knows linear algebra, softmax and basic neural networks but is new to NLP. It follows the Word Embedding Lab. Source deck: M. Samiei, \"Lecture 3: Attention\", CS 677, Sharif University of Technology (after Bahdanau, Cho & Bengio 2015 and Vaswani et al. 2017). The worked numbers in lessons 2, 3 and 6 are the slides' own examples (slides 21, 25–26, 54), and the BLEU scores are the papers' (slides 29, 63). Everything else is a teaching toy: the fixed-vector encoder in lesson 1 stores random word codes, the scorer and token vectors in lessons 3–4 are hand-set rather than trained, and lesson 7's toy self-attention uses 2-D embeddings.",
+  "lessons": [
+    {
+      "id": "bottleneck",
+      "n": 1,
+      "title": "One vector can't hold a long sentence",
+      "sub": "encoder–decoder · bottleneck · weighted context",
+      "file": "l1-bottleneck.jsx",
+      "slides": "2–17"
+    },
+    {
+      "id": "dotattn",
+      "n": 2,
+      "title": "Score, normalize, mix",
+      "sub": "q·k · softmax · weighted sum",
+      "file": "l2-dotattn.jsx",
+      "slides": "20–21, 23"
+    },
+    {
+      "id": "additive",
+      "n": 3,
+      "title": "Bahdanau: the decoder decides where to look",
+      "sub": "e = vᵀtanh(Ws + Uh) · alignment · BLEU",
+      "file": "l3-additive.jsx",
+      "slides": "22–30"
+    },
+    {
+      "id": "selfattn",
+      "n": 4,
+      "title": "Every token asks, every token answers",
+      "sub": "self-attention · Q, K, V · context builds meaning",
+      "file": "l4-selfattn.jsx",
+      "slides": "31, 37–39, 46–47, 69–71"
+    },
+    {
+      "id": "scale",
+      "n": 5,
+      "title": "Why divide by √d_k",
+      "sub": "softmax saturation · multi-head · encoder layer",
+      "file": "l5-scale.jsx",
+      "slides": "40–43, 62"
+    },
+    {
+      "id": "mask",
+      "n": 6,
+      "title": "Don't peek at the answer",
+      "sub": "teacher forcing · causal mask · −∞",
+      "file": "l6-mask.jsx",
+      "slides": "48–55"
+    },
+    {
+      "id": "position",
+      "n": 7,
+      "title": "Where is word order?",
+      "sub": "permutation · sinusoidal positions",
+      "file": "l7-position.jsx",
+      "slides": "56–61"
+    }
+  ]
+}

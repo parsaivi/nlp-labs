@@ -1,0 +1,23 @@
+{
+  "course": "Natural Language Processing (CS 677, Fall 2026)",
+  "lecturer": "Mahdi Samiei, Sharif University of Technology",
+  "note": "Deck order follows the course. A deck is 'done' when some lab lists it in its lab.json `decks`.",
+  "decks": [
+    {
+      "file": "01-Introduction.pdf",
+      "title": "Introduction",
+      "slides": 57
+    },
+    {
+      "file": "02-Word-Embedding.pdf",
+      "title": "Word Embedding",
+      "slides": 39
+    },
+    {
+      "file": "03-Attention.pdf",
+      "title": "Attention",
+      "slides": 73
+    }
+  ],
+  "explainers": []
+}
