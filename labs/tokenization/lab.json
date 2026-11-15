@@ -1,0 +1,77 @@
+{
+  "id": "tokenization",
+  "title": "Tokenization Lab",
+  "decks": [
+    "04-Tokenization.pdf"
+  ],
+  "sub": "NLP · Lecture 4: Tokenization · seven hands-on lessons",
+  "stamp": "Page: the token sequence<br><b>same text, different pieces</b> · click, cut and merge",
+  "anchor": "the token sequence itself (no story)",
+  "navWidth": 190,
+  "built": "2026-11-15",
+  "artifact": "",
+  "deckDividers": {
+    "1": "Part 1 · From text to tokens (slides 6–21)",
+    "3": "Part 2 · Learning a tokenizer: BPE (slides 22–37)",
+    "6": "Part 3 · Tokenization in practice: Persian and beyond (slides 38–48)"
+  },
+  "footer": "Each lesson runs Puzzle → Explore → Name → Challenge (interactive-educator method), for a learner who knows linear algebra, softmax and basic neural networks but is new to NLP. It follows the Attention Lab. Source deck: M. Samiei, \"Lecture 4: Tokenization\", CS 677, Sharif University of Technology (after Sennrich, Haddow &amp; Birch 2016 and Ali et al. 2024). From the slides, reproduced exactly: the vocabulary IDs and 30,000 × 768 = 23,040,000 (slides 9–12), [UNK] and the 4× → 16× attention cost (15–17), the BPE corpus, its five merges, tie rule and IDs 0–15 (25–29), the trace lowest → [low, est&lt;/w&gt;] → [15, 13] (31–32), [BOS] 16 / [EOS] 17, the padding mask and 12.3M / 24.6M / 49.2M (33–37), the UTF-8 bytes and Persian code points (39, 41), and the Persian vs English token counts for one sentence pair from 19 models (45–47, OpenRouter, 8–9 Nov 2026). Other byte sequences come from the browser’s own TextEncoder and String.normalize. Everything else is a teaching toy: the extra vocabulary words and their IDs, the extra BPE rules (w+e, o+w), the small English and Persian training corpora and the token counts BPE produces on them, the 2-D embeddings in lesson 5’s padding puzzle, and every challenge budget.",
+  "lessons": [
+    {
+      "id": "ids",
+      "n": 1,
+      "title": "Text becomes IDs",
+      "sub": "vocabulary · one-hot · V × d parameters",
+      "file": "l1-ids.jsx",
+      "slides": "6–13"
+    },
+    {
+      "id": "units",
+      "n": 2,
+      "title": "Words or characters?",
+      "sub": "[UNK] · character tokens · O(n²d) attention",
+      "file": "l2-units.jsx",
+      "slides": "14–21"
+    },
+    {
+      "id": "merge",
+      "n": 3,
+      "title": "BPE training: merge the most frequent pair",
+      "sub": "pair counts · ties · ordered merge rules",
+      "file": "l3-merge.jsx",
+      "slides": "22–29"
+    },
+    {
+      "id": "apply",
+      "n": 4,
+      "title": "BPE inference: apply rules by rank",
+      "sub": "frozen rules · earliest rank · unseen words",
+      "file": "l4-apply.jsx",
+      "slides": "30–32"
+    },
+    {
+      "id": "special",
+      "n": 5,
+      "title": "Special tokens and vocabulary size",
+      "sub": "[BOS] [EOS] [PAD] · padding mask · where to stop merging",
+      "file": "l5-special.jsx",
+      "slides": "33–37"
+    },
+    {
+      "id": "bytes",
+      "n": 6,
+      "title": "Bytes, Persian text, and meaning",
+      "sub": "UTF-8 bytes · ZWNJ & yeh/kaf · BPE ≠ morphemes",
+      "file": "l6-bytes.jsx",
+      "slides": "38–41"
+    },
+    {
+      "id": "tax",
+      "n": 7,
+      "title": "The Persian token tax",
+      "sub": "corpus mix · tokenizer evaluation · Δ tokens",
+      "file": "l7-tax.jsx",
+      "slides": "42–48"
+    }
+  ]
+}

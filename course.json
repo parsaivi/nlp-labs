@@ -17,6 +17,11 @@
       "file": "03-Attention.pdf",
       "title": "Attention",
       "slides": 73
+    },
+    {
+      "file": "04-Tokenization.pdf",
+      "title": "Tokenization",
+      "slides": 48
     }
   ],
   "explainers": []

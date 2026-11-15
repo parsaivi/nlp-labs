@@ -67,7 +67,8 @@ const PAGE_SCRIPT = fs.readFileSync(path.join(__dirname, "fuzz-page.js"), "utf8"
   console.log(logs.length ? "console / exceptions:\n" + logs.slice(0, 15).join("\n") : "no console errors");
   ws.close();
   chrome.kill();
-  fs.rmSync(prof, { recursive: true, force: true });
+  // Chrome may still be writing its profile right after kill(); retry, and never let cleanup fail the run
+  try { fs.rmSync(prof, { recursive: true, force: true, maxRetries: 10, retryDelay: 200 }); } catch (e) {}
   process.exit(out && !out.errs.length && !logs.length ? 0 : 2);
 })().catch((e) => {
   console.error("harness error", e);
