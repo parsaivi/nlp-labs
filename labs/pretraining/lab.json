@@ -1,0 +1,77 @@
+{
+  "id": "pretraining",
+  "title": "Pretraining Lab",
+  "decks": [
+    "05-Pretraining.pdf"
+  ],
+  "sub": "NLP · Lecture 5: Pretraining · seven hands-on lessons",
+  "stamp": "Page: the model's predictions<br><b>what it learns, and from which targets</b> · drag, count and route",
+  "anchor": "the deck's own toy corpora and examples (no story)",
+  "navWidth": 190,
+  "built": "2026-11-18",
+  "artifact": "",
+  "deckDividers": {
+    "1": "Part 1 · Borrow an idea from vision (slides 7–19)",
+    "2": "Part 2 · Language modeling: the game, counts and scores (slides 20–60)",
+    "6": "Part 3 · BERT: pretrain an encoder, then reuse it (slides 61–89)"
+  },
+  "footer": "Each lesson runs Puzzle → Explore → Name → Challenge (interactive-educator method), for a learner who knows linear algebra, softmax and basic neural networks but is new to NLP. It follows the Tokenization Lab; the deck's GPT-1 and KV-cache slides (90–107) are taught in the GPT Lab. Source deck: M. Samiei, \"Lecture 5: Pretraining\", CS 677, Sharif University of Technology (after Bengio et al. 2003, Devlin et al. 2019, Liu et al. 2019, Ardakani 2022). From the slides, reproduced exactly: the 512 → 2 head (slide 13); the oracle values 0.4 × 0.2 × 0.5 × 0.1 = 0.004 and 0.0000002 (26–27), cup 55% / mug 25% / glass 10% (25) and positive 0.72 (28); the eight-sentence corpus, its counts and the scores 0.225, 0.150 and 0 (35–39, 44); models A and B, H ≈ 0.474 / 0.749 and (1/2 · 1/4 · 1/8)^(−1/3) = 4 (40–43); add-one P(runs | cat) = 1/10 (46); loss 2.303 → 0.511 and the Brown perplexities 312 / 268 / 252 (55–56); 15% with 80/10/10 and the losses 1.609 + 0.223 (70, 75); the GLUE accuracies 68.1/84.9, 81.4/93.2, 54.9/72.2 (81) and the NSP ablations 84.4/83.9 and 84.0/84.7 (83). Everything else is a teaching toy: the 2-D leaf data, toy backbone and its accuracy curves (lesson 1), the oracle's other probabilities (2), the extra corpus sentences (3), the 2-D neural LM trained in your browser and its probabilities (5), the masked-word guesses, the 16-word masking sentence and the challenge input (6), and the head outputs in the tagging and QA examples (7).",
+  "lessons": [
+    {
+      "id": "transfer",
+      "n": 1,
+      "title": "Learn once, reuse",
+      "sub": "backbone · new head · frozen vs fine-tune vs scratch",
+      "file": "l1-transfer.jsx",
+      "slides": "7–19"
+    },
+    {
+      "id": "game",
+      "n": 2,
+      "title": "The language-model game",
+      "sub": "next-token distribution · chain rule · [EOS] · tasks as text",
+      "file": "l2-game.jsx",
+      "slides": "20–30"
+    },
+    {
+      "id": "counts",
+      "n": 3,
+      "title": "Count, divide, multiply: the bigram model",
+      "sub": "n-gram counts · MLE · sentence scores · one unseen pair",
+      "file": "l3-counts.jsx",
+      "slides": "31–39, 44"
+    },
+    {
+      "id": "perplexity",
+      "n": 4,
+      "title": "Which model predicts better?",
+      "sub": "per-token surprise · cross-entropy · perplexity · fair comparison",
+      "file": "l4-perplexity.jsx",
+      "slides": "40–43"
+    },
+    {
+      "id": "neural",
+      "n": 5,
+      "title": "Share strength: a neural LM",
+      "sub": "add-k smoothing · shared vectors C · Bengio 2003",
+      "file": "l5-neural.jsx",
+      "slides": "44–60"
+    },
+    {
+      "id": "mlm",
+      "n": 6,
+      "title": "BERT's pretraining: MLM and NSP",
+      "sub": "both sides · 15% · 80/10/10 · [CLS] · joint loss",
+      "file": "l6-mlm.jsx",
+      "slides": "61–75"
+    },
+    {
+      "id": "finetune",
+      "n": 7,
+      "title": "Reuse BERT: pick the vectors, add a head",
+      "sub": "[CLS] vs token vectors · head size · pretrained vs random",
+      "file": "l7-finetune.jsx",
+      "slides": "76–89"
+    }
+  ]
+}

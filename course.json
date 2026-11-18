@@ -22,6 +22,16 @@
       "file": "04-Tokenization.pdf",
       "title": "Tokenization",
       "slides": 48
+    },
+    {
+      "file": "05-Pretraining.pdf",
+      "title": "Pretraining",
+      "slides": 107
+    },
+    {
+      "file": "06-GPTs.pdf",
+      "title": "GPTs",
+      "slides": 76
     }
   ],
   "explainers": []
